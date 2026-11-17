@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Sejal 💍</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Great+Vibes&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ff6fa8;--deep:#7a1f4d;--rose:#ffc6dc;--blush:#fff1f7;--gold:#f2bd4b}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{font-family:'Quicksand',sans-serif;color:var(--deep);transition:background .8s,color .8s;
+background:radial-gradient(circle at 15% 10%,#ffdcec,transparent 55%),radial-gradient(circle at 85% 90%,#ffd0e6,transparent 55%),#fff1f7;overflow-x:hidden}
+body.night{color:#fff;background:radial-gradient(circle at 20% 10%,#4a2a7a,transparent 55%),radial-gradient(circle at 80% 90%,#7a2a72,transparent 55%),#1d1038}
+body.night h1,body.night h2{color:#ffd1e6;text-shadow:none}
+body.night .card{background:rgba(255,255,255,.1);color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.3);border:1px solid rgba(255,210,230,.35)}
+body.night .nav{background:linear-gradient(transparent,#1d1038 45%)}
+body.night .sig{color:#5c2142}
+.float{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.float span{position:absolute;bottom:-40px;animation:rise linear infinite;opacity:.7}
+@keyframes rise{to{transform:translateY(-115vh) rotate(40deg);opacity:0}}
+.bf{position:fixed;font-size:26px;pointer-events:none;z-index:2;animation:flit 14s linear infinite;opacity:.85}
+@keyframes flit{0%{transform:translate(0,0) rotate(0)}25%{transform:translate(60px,-25vh) rotate(15deg)}50%{transform:translate(-40px,-50vh) rotate(-12deg)}75%{transform:translate(50px,-75vh) rotate(10deg)}100%{transform:translate(0,-105vh) rotate(0)}}
+#app{position:relative;z-index:1;max-width:540px;margin:0 auto;min-height:100%;padding:26px 20px 130px}
+.page{display:none;text-align:center;animation:fade .7s ease}
+.page.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}}
+@keyframes lt{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+h1{font-family:'Great Vibes',cursive;font-weight:400;font-size:3.2rem;color:var(--pink);line-height:1.1;text-shadow:0 2px 0 #fff}
+h2{font-family:'Great Vibes',cursive;font-weight:400;font-size:2.2rem;color:var(--pink);margin-bottom:8px}
+.sub{opacity:.85;margin:8px 0 18px;line-height:1.6}
+.card{background:#fff;border-radius:22px;padding:20px;margin:14px 0;box-shadow:0 10px 28px rgba(255,111,168,.22);text-align:left;line-height:1.75}
+button{font:inherit;font-weight:700;border:0;border-radius:999px;padding:13px 26px;color:#fff;cursor:pointer;background:linear-gradient(135deg,#ff82b6,#ff4f95);box-shadow:0 6px 16px rgba(255,79,149,.4)}
+button:active{transform:scale(.97)}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:5;padding:12px 16px 16px;background:linear-gradient(transparent,#fff1f7 45%);display:flex;flex-direction:column;align-items:center;gap:8px}
+.crowns{display:flex;gap:7px;font-size:15px}.crowns i{font-style:normal;filter:grayscale(1);opacity:.35;transition:.3s}.crowns i.done{filter:none;opacity:.85}.crowns i.on{filter:none;opacity:1;transform:scale(1.4)}
+#next:disabled{opacity:.35;box-shadow:none;cursor:not-allowed}
+.hint{font-size:.8rem;opacity:.75;min-height:1em}
+.hidden{display:none!important}
+.env{width:220px;height:150px;margin:28px auto 8px;position:relative;cursor:pointer;animation:wob 2s ease-in-out infinite}
+@keyframes wob{50%{transform:translateY(-8px) rotate(2deg)}}
+.env .body{position:absolute;inset:40px 0 0;background:linear-gradient(#ffb3d1,#ff8fbd);border-radius:10px;box-shadow:0 10px 24px rgba(255,111,168,.4)}
+.env .flap{position:absolute;top:0;left:0;right:0;height:80px;background:#ff9cc5;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s}
+.env .seal{position:absolute;top:62px;left:50%;transform:translateX(-50%);font-size:34px;z-index:2;transition:.5s}
+.env.open{animation:none}.env.open .flap{transform:rotateX(180deg);background:#ffc2dc}.env.open .seal{opacity:0}
+.route{display:flex;align-items:center;gap:8px;justify-content:center;font-weight:700;margin:14px 0}
+.route .line{flex:0 1 120px;height:2px;background:repeating-linear-gradient(90deg,var(--pink) 0 6px,transparent 6px 12px);position:relative}
+.route .line b{position:absolute;top:-11px;left:0;font-size:20px;animation:fly 3s linear infinite}
+@keyframes fly{to{left:calc(100% - 20px)}}
+.opt{display:block;width:100%;margin:10px 0;text-align:left;background:var(--blush);color:var(--deep);box-shadow:none;border:2px solid var(--rose)}
+.opt.right{background:#ffe9a8;border-color:var(--gold)}
+.opt.wrong{opacity:.5;animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.fb{min-height:3em;margin-top:10px;font-weight:600;text-align:center}
+.beat{opacity:0;transform:translateY(12px);transition:.8s;margin:12px 0;display:none}
+.beat.on{display:block;opacity:1;transform:none}
+.beat .yr{font-family:'Great Vibes',cursive;color:var(--pink);font-size:1.7rem;display:block}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.flip{perspective:700px;height:150px;cursor:pointer}
+.flip>div{position:relative;width:100%;height:100%;transition:transform .7s;transform-style:preserve-3d}
+.flip.on>div{transform:rotateY(180deg)}
+.flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;border-radius:18px;display:flex;align-items:center;justify-content:center;padding:12px;text-align:center}
+.flip .f{background:linear-gradient(135deg,#ff9cc5,#ff6fa8);color:#fff;font-size:2rem}
+.flip .b{background:#fff;transform:rotateY(180deg);font-size:.82rem;line-height:1.5;box-shadow:0 6px 18px rgba(255,111,168,.25);border:2px solid var(--rose)}
+.fut{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.fi{background:#fff;border-radius:18px;padding:14px 4px;cursor:pointer;box-shadow:0 6px 16px rgba(255,111,168,.2);border:2px solid transparent;transition:.25s;font-weight:700;font-size:.8rem}
+.fi .e{font-size:32px;display:block;margin-bottom:4px}
+.fi.on{border-color:var(--gold);background:#fff9e6;transform:scale(1.04)}
+#futmsg{min-height:6.5em;margin-top:14px;font-weight:600;line-height:1.7;background:#fff;border-radius:18px;padding:14px;text-align:left}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:8px}
+.tab{padding:9px 16px;font-size:.9rem}
+.tab:not(.act){background:#fff;color:var(--pink);border:2px solid var(--rose);box-shadow:none}
+.place{display:flex;gap:12px;align-items:flex-start;background:#fff;border-radius:18px;padding:14px;margin:10px 0;text-align:left;box-shadow:0 6px 18px rgba(255,111,168,.18);cursor:pointer;border:2px solid transparent;transition:.25s}
+.place.pick{border-color:var(--gold);background:#fff9e6}
+.place .e{font-size:28px}.place b{display:block}.place small{opacity:.85;line-height:1.5;display:block}
+.pickct{font-weight:700;margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.chip{padding:8px 12px;font-size:.82rem;background:#fff;color:var(--pink);border:2px solid var(--rose);box-shadow:none}
+.chip.on{background:#fff9e6;border-color:var(--gold);color:var(--deep)}
+#oursmsg{margin-top:12px;font-weight:600;line-height:1.6;text-align:left;min-height:0}
+#toast{position:fixed;left:50%;top:22px;transform:translate(-50%,-140%);z-index:20;width:min(88vw,420px);background:#fff;color:#7a1f4d;border:2px solid #f2bd4b;border-radius:18px;padding:14px 16px;font-weight:700;line-height:1.5;box-shadow:0 12px 30px rgba(0,0,0,.25);transition:transform .45s cubic-bezier(.3,1.5,.5,1);text-align:left}
+#toast.show{transform:translate(-50%,0)}
+.letter p{opacity:0;animation:lt 1.2s ease forwards}
+.letter p:nth-child(1){animation-delay:.3s}.letter p:nth-child(2){animation-delay:1.6s}.letter p:nth-child(3){animation-delay:3.4s}.letter p:nth-child(4){animation-delay:5.6s}.letter p:nth-child(5){animation-delay:7.8s}.letter p:nth-child(6){animation-delay:9.6s}
+.letter .sig{opacity:0;animation:lt 1.2s ease 11.4s forwards}
+.safe{background:#fff;border-left:5px solid var(--pink);border-radius:14px;padding:12px 14px;text-align:left;margin-top:12px;font-size:.9rem;line-height:1.6}
+.prom{display:flex;gap:14px;align-items:center;text-align:left;border:1px solid var(--rose);background:var(--blush);border-radius:18px;padding:14px;margin:10px 0;font-weight:700}
+.prom i{font-style:normal;flex:0 0 36px;height:36px;border-radius:50%;background:linear-gradient(#ffd877,#e7a92f);color:#6b3a00;display:flex;align-items:center;justify-content:center}
+.gift{display:flex;gap:14px;align-items:center;text-align:left;background:#fff;border:2px solid var(--gold);border-radius:20px;padding:14px;margin:12px 0;cursor:pointer;transition:.3s}
+.gift .e{flex:0 0 56px;height:56px;border-radius:16px;background:linear-gradient(#ffe3f0,#ffc2dc);display:flex;align-items:center;justify-content:center;font-size:30px}
+.gift .t{font-family:'Great Vibes',cursive;font-size:1.7rem;color:var(--pink);line-height:1.1}
+.gift .d{font-size:.92rem;line-height:1.5}
+.gift .d.lock{opacity:.6;font-style:italic}
+.gift.on{background:#fff9e6}
+.note{font-family:'Caveat',cursive;font-size:1.45rem;line-height:1.6;background:#fffdf7;color:#5c2142;border-radius:6px;padding:22px 20px;box-shadow:0 8px 22px rgba(0,0,0,.12);transform:rotate(-1deg);margin:18px 0;text-align:left}
+.letter{font-family:'Caveat',cursive;font-size:1.5rem;line-height:1.65;background:#fffdf7;color:#5c2142;border-radius:10px;padding:26px 22px;text-align:left;box-shadow:0 10px 28px rgba(0,0,0,.25);margin:14px 0}
+.letter p{margin:0 0 14px}
+.sig{font-family:'Great Vibes',cursive;font-size:2.2rem;color:var(--pink);text-align:right}
+.ring{font-size:70px;animation:pop 1s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pop{from{transform:scale(0) rotate(-40deg)}}
+.spark{position:fixed;pointer-events:none;z-index:9;font-size:20px;animation:burst 1.1s ease-out forwards}
+@keyframes burst{to{transform:translate(var(--x),var(--y)) scale(.3);opacity:0}}
+.final{font-size:1.15rem;line-height:1.9;font-weight:600;margin-top:14px;animation:fade 1s}
+</style>
+</head>
+<body>
+<div class="float" id="float"></div>
+<div id="toast"></div>
+<div id="app">
+
+<!-- 0 COVER -->
+<section class="page on" data-gate="env">
+  <h1>Sejal</h1>
+  <p class="sub">There is something waiting for you in Bangalore.</p>
+  <div class="route"><span>Pune</span><div class="line"><b>🚆</b></div><span>Bangalore</span></div>
+  <div class="env" id="env"><div class="body"></div><div class="flap"></div><div class="seal">💍</div></div>
+  <p class="sub" id="envtxt"><b>Tap the envelope</b></p>
+  <div class="card hidden" id="envcard" style="text-align:center">
+    <p>Hi Sejal 🤍</p>
+    <p>This isn't a normal page. It has chapters. Each one opens only when you do the little thing it asks.</p>
+    <p style="margin-top:8px"><b>Read slowly. I made this for you.</b> 🦋</p>
+  </div>
+</section>
+
+<!-- 1 QUIZ -->
+<section class="page" data-gate="quiz">
+  <h2>Chapter 1 · Do you remember?</h2>
+  <p class="sub">Five questions. Only you and I know the answers.</p>
+  <div class="card" id="qbox"></div>
+  <div class="fb" id="fb"></div>
+</section>
+
+<!-- 2 STORY -->
+<section class="page" data-gate="story">
+  <h2>Chapter 2 · Our memories</h2>
+  <p class="sub">Tap <b>Turn the page</b> below to open each memory.</p>
+  <div id="beats">
+    <div class="card beat"><span class="yr">🎬 The reel in Patna</span>The reel we made in Patna. Two people being silly, being completely themselves. That's us, every time.</div>
+    <div class="card beat"><span class="yr">📱 The video calls</span>Countless video calls. Late nights, bad network, dying batteries, "five more minutes" that turned into hours. Distance never won.</div>
+    <div class="card beat"><span class="yr">🥂 The day in Pune</span>The day we met in Pune. Countless memories, drinks, and laughing like no time had passed at all.</div>
+    <div class="card beat"><span class="yr">🔁 Always coming back</span>Different phases, different partners, quietly checking who was in each other's life. But we never really left. We always came back.</div>
+    <div class="card beat"><span class="yr">🦋 And now</span>Now you're coming to Bangalore. Not to check on my life, but to be in it.</div>
+  </div>
+</section>
+
+<!-- 3 FLIPS -->
+<section class="page" data-gate="flips">
+  <h2>Chapter 3 · Things I should say more</h2>
+  <p class="sub">Flip all six cards.</p>
+  <div class="grid" id="flips"></div>
+  <p class="pickct" id="flipct">0 / 6</p>
+</section>
+
+<!-- 4 FUTURE -->
+<section class="page" data-gate="fut">
+  <h2>Chapter 4 · What we'll do together</h2>
+  <p class="sub">Tap each one. Open at least 6. 🦋</p>
+  <div class="fut" id="fut"></div>
+  <div id="futmsg">Tap an icon…</div>
+  <p class="pickct" id="futct">0 opened</p>
+</section>
+
+<!-- 4b DAY -->
+<section class="page" data-gate="day">
+  <h2>Chapter 5 · One whole day with you</h2>
+  <p class="sub">You'll spend an entire day with me. And one evening, we're going out for dinner. Tap <b>Next hour</b> below to see how the day goes.</p>
+  <div id="daybeats">
+    <div class="card beat"><span class="yr">🌅 Morning</span>No alarm. Slow wake-up, hot chai, and a long breakfast. I'm not letting you rush a single minute of it.</div>
+    <div class="card beat"><span class="yr">☀️ Afternoon</span>A lazy wander wherever you feel like, laughing at nothing, too many photos, and zero plans.</div>
+    <div class="card beat"><span class="yr">🌇 Golden hour</span>The sky turns orange, the music goes on, and I finally get to hold your hand for real.</div>
+    <div class="card beat"><span class="yr">🍽️ Evening: dinner for two</span>One evening is set aside for dinner, just you and me. Wear something you love. The place is a surprise. I'll be the one who can't stop looking at you.</div>
+    <div class="card beat"><span class="yr">🌙 After dinner</span>We walk back slowly, because this day doesn't end until you say it does.</div>
+  </div>
+</section>
+
+<!-- 5 BANGALORE -->
+<section class="page" data-gate="plan">
+  <h2>Chapter 6 · Your Bangalore</h2>
+  <p class="sub">When I'm at work and you want to explore on your own, here's where to go. Tick at least <b>4</b> you want to try.</p>
+  <div class="card" id="oursbox" style="text-align:center">
+    <b>🔒 Only with me</b>
+    <p style="margin:4px 0 10px;font-size:.92rem">Some of Bangalore can't be done alone. Tap one to see.</p>
+    <div class="chips" id="chips"></div>
+    <div id="oursmsg"></div>
+  </div>
+  <div class="tabs" id="tabs"></div>
+  <div id="places"></div>
+  <p class="pickct" id="pickct">0 picked</p>
+  <div class="safe">💗 Whenever you go out alone, share your live location with me. Not to check on you, just so I never worry. Timings and prices change, so check before you go.</div>
+</section>
+
+<!-- 6 GIFTS -->
+<section class="page" data-gate="gifts">
+  <h2>Chapter 7 · My promises & your gifts</h2>
+  <div class="card">
+    <h2 style="font-size:2rem">My promises to you</h2>
+    <div class="prom"><i>1</i>I'll choose you on the good days and the hard ones.</div>
+    <div class="prom"><i>2</i>I'll stay, even when it's difficult, and keep making you feel safe.</div>
+    <div class="prom"><i>3</i>I'll build the life you wanted, with you.</div>
+  </div>
+  <p class="sub">Three gifts are waiting. Tap each one to open it.</p>
+  <div id="gifts"></div>
+  <div class="note hidden" id="note">Sejal,<br>you don't need a crown for me to treat you like a queen. You've always had mine. 🦋<br>— Shobhan</div>
+  <p class="pickct" id="giftct">0 / 3</p>
+</section>
+
+<!-- 7 FINAL -->
+<section class="page" data-gate="none">
+  <div class="ring">💍</div>
+  <h1>For you, Sejal</h1>
+  <div class="letter">
+    <p>Dear Sejal, my Seju-Kaju,</p>
+    <p>I've tried to write this a hundred ways, and every version starts the same: thank you for being the one person I never had to pretend with.</p>
+    <p>I can't tell you how many drinks we had in Pune. (Don't remember too muchhhh.) But I remember how easy it felt to just sit next to you, and I remember thinking, nobody else has ever made me feel this at home.</p>
+    <p>So here's my offer, Princess. Not a perfect life. A real one. Bad jokes, long calls, silent days, loud days, and a man who will choose you in every one of them. You bring the dreams, I'll bring the chai, and we'll figure out the rest together.</p>
+    <p><b>This will be the start of the life you wanted, and we thought.</b></p>
+    <p>Now put the phone down. Your hug is overdue. 🤍</p>
+    <div class="sig">Yours, always, Shobhan</div>
+  </div>
+  <div class="card" id="mine" style="text-align:center"></div>
+  <button id="boom">Open your final surprise ✨</button>
+  <div class="final hidden" id="last">Welcome to Bangalore, Sejal. 🦋<br>Your first hug is waiting, and your list is ready.<br>I love you. 💍</div>
+</section>
+</div>
+
+<div class="nav">
+  <div class="hint" id="hint"></div>
+  <button id="next" disabled>Open →</button>
+  <div class="crowns" id="dots"></div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const E=['💖','✨','💍','🌸','🦋','🤍','🦋'];
+const fl=$('float');
+for(let i=0;i<20;i++){const s=document.createElement('span');s.textContent=E[i%E.length];s.style.left=Math.random()*100+'%';s.style.fontSize=(14+Math.random()*16)+'px';s.style.animationDuration=(10+Math.random()*10)+'s';s.style.animationDelay=(-Math.random()*15)+'s';fl.appendChild(s)}
+for(let i=0;i<7;i++){const b=document.createElement('div');b.className='bf';b.textContent='🦋';b.style.left=(Math.random()*90)+'%';b.style.bottom='-40px';b.style.animationDelay=(-Math.random()*14)+'s';b.style.animationDuration=(12+Math.random()*8)+'s';document.body.appendChild(b)}
+function burst(x,y,n=24){for(let i=0;i<n;i++){const s=document.createElement('div');s.className='spark';s.textContent=E[i%E.length];s.style.left=x+'px';s.style.top=y+'px';s.style.setProperty('--x',(Math.random()-.5)*360+'px');s.style.setProperty('--y',(Math.random()-.85)*360+'px');document.body.appendChild(s);setTimeout(()=>s.remove(),1100)}}
+
+const pages=[...document.querySelectorAll('.page')];
+const done={env:false,quiz:false,story:false,day:false,flips:false,fut:false,plan:false,gifts:false,none:true};
+const hints={env:'Tap the envelope first',quiz:'Answer all five to continue',flips:'Flip all six cards',fut:'Open at least 6 promises',plan:'Tick at least 4 places',gifts:'Open all three gifts'};
+let cur=0;
+const dots=$('dots');pages.forEach(()=>{const i=document.createElement('i');i.textContent='👑';dots.appendChild(i)});
+
+const R={story:{sel:'#beats',lbl:'Turn the page 💌'},day:{sel:'#daybeats',lbl:'Next hour ⏰'}};
+Object.values(R).forEach(r=>{r.list=[...document.querySelectorAll(r.sel+' .beat')];r.i=0});
+function reveal(g){
+  const r=R[g];
+  if(r.i<r.list.length){const b=r.list[r.i];b.classList.add('on');r.i++;setTimeout(()=>b.scrollIntoView({behavior:'smooth',block:'center'}),50)}
+  if(r.i>=r.list.length){done[g]=true}
+  refresh();
+}
+function go(n){
+  cur=n;
+  pages.forEach((p,i)=>p.classList.toggle('on',i===n));
+  [...dots.children].forEach((d,i)=>{d.classList.toggle('on',i===n);d.classList.toggle('done',i<n)});
+  document.body.classList.toggle('night',n===pages.length-1);
+  scrollTo(0,0);
+  {const g=pages[n].dataset.gate;if(R[g]&&R[g].i===0)reveal(g)}
+  if(n===pages.length-1){drawMine();burst(innerWidth/2,innerHeight/3,50)}
+  refresh();
+}
+function refresh(){
+  const g=pages[cur].dataset.gate,ok=done[g];
+  const storyOpen=!!R[g]&&!ok;
+  $('next').disabled=!(ok||storyOpen);
+  $('next').classList.toggle('hidden',cur===pages.length-1);
+  $('hint').textContent=ok||storyOpen?'':(hints[g]||'');
+  $('next').textContent=storyOpen?R[g].lbl:(cur===0?'Begin →':'Next chapter →');
+}
+$('next').onclick=e=>{
+  burst(e.clientX,e.clientY,10);
+  {const g=pages[cur].dataset.gate;if(R[g]&&!done[g]){reveal(g);return}}
+  go(cur+1);
+};
+
+$('env').onclick=e=>{$('env').classList.add('open');$('envtxt').classList.add('hidden');$('envcard').classList.remove('hidden');burst(e.clientX,e.clientY,30);done.env=true;refresh()};
+
+const Q=[
+ {q:'What did I pass you through the classroom window?',o:['A chocolate','A ring','A love letter','My homework'],a:1,ok:'Yes. A ring. I was already sure about you, I was just too young to know it. 💍'},
+ {q:'What happened when the teacher caught our letter?',o:['Gave us detention','Moved me to the last bench','Slapped me in front of the whole class','Called my parents'],a:2,ok:'Worth it. Every single time. 😄'},
+ {q:'Which city is the love of my life travelling from to meet me now?',o:['Mumbai','Delhi','Pune','Hyderabad'],a:2,ok:'Pune to Bangalore. The best journey I’ve ever waited for. 🚆'},
+ {q:'How many drinks did we have the day we met in Pune?',o:['Just 2, I swear','Exactly 5','I counted every one','Don’t remember too muchhhh'],a:3,ok:'Honest answer. Same here. Worth every sip. 🥂😂'},
+ {q:'Final one. What do I call the love of my life?',o:['Seju','Sejal','Wifey (soon) 😏','All of the above'],a:3,ok:'All of the above. Especially the last one. 💍🥰'}
+];
+let qi=0;
+function showQ(){
+  const q=Q[qi];$('fb').textContent='';
+  $('qbox').innerHTML='<b>'+(qi+1)+' / '+Q.length+'</b><p style="margin:8px 0 6px">'+q.q+'</p>'+q.o.map((t,i)=>'<button class="opt" data-i="'+i+'">'+t+'</button>').join('');
+  $('qbox').querySelectorAll('.opt').forEach(b=>b.onclick=e=>{
+    const i=+b.dataset.i;
+    if(i===q.a){b.classList.add('right');$('fb').textContent=q.ok;burst(e.clientX,e.clientY,20);
+      $('qbox').querySelectorAll('.opt').forEach(x=>x.disabled=true);
+      setTimeout(()=>{qi++;if(qi<Q.length)showQ();else{$('qbox').innerHTML='<p style="text-align:center;font-size:1.1rem">5 out of 5. Of course you remember. 🥹<br>Chapter 2 is unlocked.</p>';$('fb').textContent='';done.quiz=true;refresh()}},2200);
+    }else{b.classList.add('wrong');b.disabled=true;$('fb').textContent='Hmm, think again, Sejal… 😏'}
+  });
+}
+showQ();
+
+const notes=[
+ ['🦋','You still give me butterflies. After all these years, one message from you and my whole day changes.'],
+ ['🌙','I still think about that classroom window. Every good thing since then has had you somewhere in it.'],
+ ['✨','You walk into a room and I forget what I was saying. You’ve always done that to me.'],
+ ['🏡','With you, home isn’t a place. It’s wherever you are sitting next to me.'],
+ ['🌅','I want ordinary Sundays with you. Slow mornings, bad jokes, nowhere to be.'],
+ ['💍','I’m not scared of forever anymore. Not with you.']
+];
+let fc=0;
+notes.forEach(n=>{const d=document.createElement('div');d.className='flip';d.innerHTML='<div><div class="f">'+n[0]+'</div><div class="b">'+n[1]+'</div></div>';
+ d.onclick=e=>{if(!d.classList.contains('on')){d.classList.add('on');fc++;$('flipct').textContent=fc+' / 6';burst(e.clientX,e.clientY,8);if(fc===6){done.flips=true;refresh()}}};
+ $('flips').appendChild(d)});
+
+const F=[
+ ['💃','Dance','We’ll dance to our Ehsaas song. In the rain, or late at night a little drunk, barefoot, nobody watching, just you and me.'],
+ ['✈️','Travel','Mountains, beaches, long drives, strange cities. Every trip with you will be my favourite one.'],
+ ['😂','Laugh','Laugh like we do on our video calls and over drinks in Pune. Till our stomachs hurt.'],
+ ['🌹','Date nights','Even after years, I’ll still dress up, still plan, still make you feel like the first date.'],
+ ['🛕','Temples','We’ll fold our hands side by side and ask for the same thing: each other, always.'],
+ ['🥂','Late nights','Late-night drinks, deep talks, silly talks. Nothing to prove, no one to impress.'],
+ ['🌧️','Rain rides','Bike, hot chai, and you holding on to me. That’s the whole plan.'],
+ ['🎬','More reels','More reels like the one in Patna. More photos, more videos, every festival, every ordinary day with you in it.'],
+ ['🏡','Our home','A home with your favourite things in it, and you in my life every day.']
+];
+let fo=0;
+F.forEach(f=>{const d=document.createElement('div');d.className='fi';d.innerHTML='<span class="e">'+f[0]+'</span>'+f[1];
+ d.onclick=e=>{$('futmsg').textContent=f[2];burst(e.clientX,e.clientY,10);
+  if(!d.classList.contains('on')){d.classList.add('on');fo++;$('futct').textContent=fo+' opened'+(fo>=6?' ✓':'');if(fo>=6){done.fut=true;refresh()}}};
+ $('fut').appendChild(d)});
+
+const P={
+ 'Eat 🍽️':[
+  ['🥢','Chinlungs, Indiranagar','For when the Chinese craving hits. Order your favourites and send me a photo.'],
+  ['🍛','Nagarjuna (mutton biryani)','Go hungry. The mutton biryani is the one to try.'],
+  ['🍳','Toit, Indiranagar (breakfast)','A slow, lovely breakfast in Indiranagar.'],
+  ['🥞','Vidyarthi Bhavan, Basavanagudi','Legendary crispy masala dosa. Expect a queue.'],
+  ['☕','Third Wave Coffee','Good coffee and a corner seat. Easy for a quiet hour.'],
+  ['🍨','Corner House, Death by Chocolate','For the sweet tooth. Obviously.'],
+  ['🌙','Late-night food run on the bike','Empty roads, hot food, wind in your hair.','Sorry Sejal, you can’t do this alone. 😏 A late-night food run needs me on the bike and you holding on.']
+ ],
+ 'See 🌳':[
+  ['🌸','Lalbagh Botanical Garden','Walk, find a bench. The glasshouse is beautiful.'],
+  ['🌿','Cubbon Park','A quiet green walk in the middle of the city.'],
+  ['🏰','Bangalore Palace','Old-world charm, great for photos.'],
+  ['🛶','Ulsoor Lake','An evening by the water, simple and peaceful.'],
+  ['🌄','Nandi Hills sunrise','Very early start, mist, and a gorgeous sunrise.','Nope, not alone! 🌄 That sunrise is booked for the two of us. I’m not letting you watch it without me.']
+ ],
+ 'Feel ✨':[
+  ['🛍️','Commercial Street','Wander, bargain, buy something silly.'],
+  ['📚','Church Street + Blossom Book House','Books, cafes, street energy.'],
+  ['🌇','A rooftop sunset','Find any high spot and watch the sky change.'],
+  ['🏍️','Night rides on the bike','City lights, cool air, music in the helmet speaker.','Sorry, you can’t do this alone, Sejal. 🏍️ Night rides come with a driver, and he’s very much taken. Saved for us.'],
+  ['🌧️','Rain walk with chai','Get completely drenched, then hot chai.','Alone?! In the rain?! 🌧️ Absolutely not. That one needs me, an umbrella we won’t use, and two chais.'],
+  ['💃','Dancing to our Ehsaas song','Slow dance, no audience.','Sorry, this one takes two. 💃 You can’t slow dance alone, no matter how good you are. Saved for us.'],
+  ['💌','Text me from wherever you are','Pick a spot, send me a pic. I’ll try to join you, and I’ll always want to hear about it.']
+ ]
+};
+const picks=new Set();let tab=Object.keys(P)[0];
+function drawTabs(){$('tabs').innerHTML='';Object.keys(P).forEach(k=>{const b=document.createElement('button');b.className='tab'+(k===tab?' act':'');b.textContent=k;b.onclick=()=>{tab=k;drawTabs();drawPlaces()};$('tabs').appendChild(b)})}
+const ours=new Set();
+function updPlan(){$('pickct').textContent=picks.size+' picked'+(picks.size>=4?' ✓':'');done.plan=picks.size>=4;refresh()}
+Object.values(P).flat().filter(p=>p[3]).forEach(p=>{const c=document.createElement('button');c.className='chip';c.textContent=p[0]+' '+p[1];
+ c.onclick=e=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');ours.add(p[1]);$('oursmsg').textContent=p[3];burst(e.clientX,e.clientY,8)};
+ $('chips').appendChild(c)});
+function drawPlaces(){$('places').innerHTML='';P[tab].filter(p=>!p[3]).forEach(p=>{const id=p[1];const d=document.createElement('div');d.className='place'+(picks.has(id)?' pick':'');
+ d.innerHTML='<span class="e">'+p[0]+'</span><div><b>'+p[1]+'</b><small>'+p[2]+'</small></div>';
+ d.onclick=e=>{picks.has(id)?picks.delete(id):picks.add(id);d.classList.toggle('pick');burst(e.clientX,e.clientY,6);updPlan()};
+ $('places').appendChild(d)})}
+drawTabs();drawPlaces();
+
+const G=[
+ ['🤗','A real hug','Not a virtual one. The first thing I do when I see you, before anything else.'],
+ ['🌹','A bouquet of roses','One rose for every time you made me smile. I’ll lose count.'],
+ ['🛡️','A royal promise','I will always treat your feelings with care and respect. Always.']
+];
+let g3=0;
+G.forEach(g=>{const d=document.createElement('div');d.className='gift';
+ d.innerHTML='<div class="e">'+g[0]+'</div><div><div class="t">'+g[1]+'</div><div class="d lock">Tap to open</div></div>';
+ d.onclick=e=>{if(d.classList.contains('on'))return;d.classList.add('on');const x=d.querySelector('.d');x.textContent=g[2];x.classList.remove('lock');burst(e.clientX,e.clientY,16);g3++;$('giftct').textContent=g3+' / 3';
+  if(g3===3){$('note').classList.remove('hidden');done.gifts=true;refresh();setTimeout(()=>$('note').scrollIntoView({behavior:'smooth',block:'center'}),200)}};
+ $('gifts').appendChild(d)});
+
+function drawMine(){
+  const l=[...picks],o=[...ours];
+  let h=l.length?'<h2>Your Bangalore list</h2>'+l.map(x=>'<div style="margin:4px 0">💗 '+x+'</div>').join('')+'<p style="margin:8px 0 0"><b>Go explore. I’ll be thinking of you the whole time.</b></p>':'';
+  if(o.length)h+='<h2 style="margin-top:16px">Saved for the two of us 🔒</h2>'+o.map(x=>'<div style="margin:4px 0">💍 '+x+'</div>').join('')+'<p style="margin:8px 0 0"><b>These ones need me. No solo versions. 😏</b></p>';
+  $('mine').innerHTML=h||'<p><b>Bangalore is waiting for you. 🤍</b></p>';
+}
+$('boom').onclick=e=>{burst(e.clientX,e.clientY,70);$('boom').classList.add('hidden');$('last').classList.remove('hidden')};
+go(0);
+</script>
+</body>
+</html>
